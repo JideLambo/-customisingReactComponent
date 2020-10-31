@@ -1,27 +1,25 @@
-import AnimalCard from "../AnimalCard/AnimalCard.js";
+// import AnimalCard from "../AnimalCard/AnimalCard.js";
+import AnotherAnimalCard from "../AnotherAnimalCard/AnotherAnimalCard";
 import data from "./data";
 import "./App.css";
 
-function showAdditional(additional) {
-  const alertInformation = Object.entries(additional)
-    .map((information) => `${information[0]}: ${information[1]}`)
-    .join("\n");
-  alert(alertInformation);
-}
+// function showAdditional(additional) {
+//   const alertInformation = Object.entries(additional)
+//     .map((information) => `${information[0]}: ${information[1]}`)
+//     .join("\n");
+//   alert(alertInformation);
+// }
 
 function App() {
   return (
     <div className="wrapper">
-      <h1>Animals</h1>
       {data.map((animal) => (
-        <AnimalCard
-          additional={animal.additional}
-          diet={animal.diet}
+        <AnotherAnimalCard
           key={animal.name}
+          diet={animal.diet}
           name={animal.name}
-          scientificName={animal.scientificName}
-          showAdditional={showAdditional}
           size={animal.size}
+          scientificName={animal.scientificName}
         />
       ))}
     </div>

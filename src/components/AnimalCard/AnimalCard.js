@@ -5,14 +5,14 @@ import "./AnimalCard.css";
 export default function AnimalCard({
   additional,
   diet,
-  name,
+  oruko,
   scientificName,
   showAdditional,
   size,
 }) {
   return (
     <div className="animal-wrapper">
-      <h2>{name}</h2>
+      <h2>{oruko}</h2>
       <h3>{scientificName}</h3>
       <h4>{size}kg</h4>
       <div>{diet.join(", ")}.</div>
@@ -27,7 +27,7 @@ AnimalCard.propTypes = {
     notes: PropTypes.string,
   }),
   diet: PropTypes.arrayOf(PropTypes.string).isRequired,
-  name: PropTypes.string.isRequired,
+  oruko: PropTypes.string.isRequired,
   scientificName: PropTypes.string.isRequired,
   showAdditional: PropTypes.func.isRequired,
   size: PropTypes.number.isRequired,
