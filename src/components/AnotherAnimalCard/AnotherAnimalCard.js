@@ -5,10 +5,9 @@ import AnimalDetails from "../AnimalDetails/AnimalDetails";
 
 export default function AnotherAnimalCard({ name, size, ...props }) {
   return (
-    <Card title="Animal">
+    <Card title="Animal" details={<AnimalDetails {...props} />}>
       <h2>{name}</h2>
       <h3>{size}kg</h3>
-      <AnimalDetails {...props} />
     </Card>
   );
 }
