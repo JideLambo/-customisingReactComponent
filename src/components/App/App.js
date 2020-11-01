@@ -1,4 +1,6 @@
 // import AnimalCard from "../AnimalCard/AnimalCard.js";
+import React from "react";
+import { createUseStyles } from "react-jss";
 import AnotherAnimalCard from "../AnotherAnimalCard/AnotherAnimalCard";
 import data from "./data";
 import "./App.css";
@@ -12,7 +14,14 @@ import CartSuccess from "../CartSuccess/CartSuccess";
 //   alert(alertInformation);
 // }
 
+const useStyles = createUseStyles({
+  wrapper: {
+    padding: 20,
+  },
+});
+
 function App() {
+  const classes = useStyles();
   return (
     <>
       <div className="wrapper">
@@ -27,7 +36,7 @@ function App() {
         ))}
       </div>
 
-      <div className="wrapper">
+      <div className={classes.wrapper}>
         <Alert title="Items Not Added" type="error">
           <div>Your items are out of stock.</div>
         </Alert>
