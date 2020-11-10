@@ -6,6 +6,7 @@ import data from "./data";
 import "./App.css";
 import Alert from "../Alert/Alert";
 import CartSuccess from "../CartSuccess/CartSuccess";
+import Product from "../Product/Product";
 
 // function showAdditional(additional) {
 //   const alertInformation = Object.entries(additional)
@@ -42,6 +43,8 @@ function App() {
         </Alert>
         <CartSuccess />
       </div>
+
+      <Product />
     </>
   );
 }
